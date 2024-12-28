@@ -43,12 +43,12 @@ class ItemCardStoreRequest extends FormRequest
             'does_has_retail_unit' => 'nullable|boolean',
 
             // Dependent fields when 'does_has_retail_unit' is true
-            'retail_uom_id' => 'required_if:does_has_retail_unit,1|exists:uoms,id',
-            'retail_uom_qty_to_parent' => 'required_if:does_has_retail_unit,1|numeric|min:1',
-            'cost_price_retail' => 'required_if:does_has_retail_unit,1|numeric|min:0',
-            'price_retail' => 'required_if:does_has_retail_unit,1|numeric|min:0',
-            'nos_gomla_price_retail' => 'required_if:does_has_retail_unit,1|numeric|min:0',
-            'gomla_price_retail' => 'required_if:does_has_retail_unit,1|numeric|min:0',
+            'retail_uom_id' => 'required_if:does_has_retail_unit,1|exists:uoms,id|nullable',
+            'retail_uom_qty_to_parent' => 'required_if:does_has_retail_unit,1|numeric|min:1|nullable',
+            'cost_price_retail' => 'required_if:does_has_retail_unit,1|numeric|min:0|nullable',
+            'price_retail' => 'required_if:does_has_retail_unit,1|numeric|min:0|nullable',
+            'nos_gomla_price_retail' => 'required_if:does_has_retail_unit,1|numeric|min:0|numeric|nullable',
+            'gomla_price_retail' => 'required_if:does_has_retail_unit,1|numeric|min:0|nullable',
         ];
     }
 

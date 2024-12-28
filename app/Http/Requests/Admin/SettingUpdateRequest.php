@@ -30,6 +30,8 @@ class SettingUpdateRequest extends FormRequest
             'general_alert'  => 'nullable|string|max:500',
             'address'        => 'nullable|string|max:255',
             'phone'          => 'nullable|regex:/^[0-9]{9,15}$/',
+            'customer_parent_account_number' => 'nullable|exists:accounts,account_number',
+
         ];
     }
 
@@ -43,10 +45,7 @@ class SettingUpdateRequest extends FormRequest
             'photo.image'             => 'الصورة يجب أن تكون ملف صورة صالح.',
             'photo.mimes'             => 'الصورة يجب أن تكون بامتداد: jpeg, png, jpg, gif, svg.',
             'photo.max'               => 'حجم الصورة يجب ألا يتجاوز 2 ميجابايت.',
-            
-            'active.required'         => 'حالة التفعيل مطلوبة.',
-            'active.boolean' => 'حالة التفعيل يجب أن تكون مفعل أو معطل.',
-            
+                        
             'general_alert.string'    => 'التنبيه العام يجب أن يكون نصاً.',
             'general_alert.max'       => 'التنبيه العام يجب ألا يزيد عن 500 حرف.',
             

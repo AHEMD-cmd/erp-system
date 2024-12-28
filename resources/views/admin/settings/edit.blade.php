@@ -41,20 +41,22 @@
                         <!-- Photo -->
                        
 
-                        <!-- Active -->
-                        {{-- <div class="form-group">
-                            <label for="active">الحالة</label>
-                            <select name="active" id="active"
-                                class="form-control @error('active') is-invalid @enderror">
-                                <option value="1" {{ old('active', $setting->active) == 1 ? 'selected' : '' }}>مفعل
-                                </option>
-                                <option value="0" {{ old('active', $setting->active) == 0 ? 'selected' : '' }}>غير مفعل
-                                </option>
+                        <div class="form-group">
+                            <label for="parent_account_number">الحساب الاب للعملاء</label>
+                            <select name="customer_parent_account_number" id="customer_parent_account_number"
+                                class="form-control @error('customer_parent_account_number') is-invalid @enderror" required>
+                                <option value="">اختر الحساب</option>
+                                @foreach ($parentAccounts as $one)
+                                    <option value="{{ $one->account_number }}"
+                                        {{ old('customer_parent_account_number', $setting->parent_account_number) == $one->account_number ? 'selected' : '' }}>
+                                        {{ $one->name }}
+                                    </option>
+                                @endforeach
                             </select>
-                            @error('active')
-                                <div class="invalid-feedback">{{ $message }}</div>
+                            @error('customer_parent_account_number')
+                                <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
-                        </div> --}}
+                        </div>
 
                         <!-- General Alert -->
                         <div class="form-group">

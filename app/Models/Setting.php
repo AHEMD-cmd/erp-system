@@ -21,6 +21,7 @@ class Setting extends Model
         'added_by',
         'updated_by',
         'company_code',
+        'customer_parent_account_number',
     ];
 
    

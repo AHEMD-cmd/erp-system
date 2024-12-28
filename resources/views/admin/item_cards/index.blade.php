@@ -5,7 +5,7 @@
 @section('content_header', 'الاصناف')
 
 @section('content_header_link')
-    <a href="{{ route('admin.uoms.index') }}">الاصناف</a>
+    <a href="{{ route('admin.item-cards.index') }}">الاصناف</a>
 @endsection
 
 @section('content_header_active', 'عرض')

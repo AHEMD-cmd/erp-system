@@ -7,7 +7,9 @@ use App\Http\Controllers\Admin\UomController;
 use App\Http\Controllers\Admin\LoginContoller;
 use App\Http\Controllers\Admin\StoreController;
 use App\Http\Controllers\Admin\SettingContoller;
+use App\Http\Controllers\Admin\AccountController;
 use App\Http\Controllers\Admin\TreasuryContoller;
+use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardContoller;
 use App\Http\Controllers\Admin\ItemCardController;
 use App\Http\Controllers\Admin\AccountTypeController;
@@ -54,6 +56,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin', 'as' => 'admin.
         Route::resource('item-card-categories', ItemCardCategoryController::class);
         Route::resource('item-cards', ItemCardController::class);
         Route::resource('account-types', AccountTypeController::class);
+        Route::resource('accounts', AccountController::class);
+        Route::resource('customers', CustomerController::class);
 
         
     }

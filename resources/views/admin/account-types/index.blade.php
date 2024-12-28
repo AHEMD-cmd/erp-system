@@ -5,7 +5,7 @@
 @section('content_header', 'انواع الحسابات')
 
 @section('content_header_link')
-    <a href="{{ route('admin.uoms.index') }}">انواع الحسابات</a>
+    <a href="{{ route('admin.account-types.index') }}">انواع الحسابات</a>
 @endsection
 
 @section('content_header_active', 'عرض')
@@ -16,7 +16,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title card_title_center">بيانات انواع الحسابات</h3>
-                    <a href="{{ route('admin.uoms.create') }}" class="btn btn-sm btn-success">اضافة وحدة</a>
+                    <a href="{{ route('admin.uoms.create') }}" class="btn btn-sm btn-success">اضافة نوع</a>
                 </div>
                 <div class="card-body">
                     <div class="row">

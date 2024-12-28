@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Customer;
+use App\Observers\CustomerObserver;
 use Illuminate\Pagination\Paginator;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\ServiceProvider;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -28,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
 
+        Customer::observe(CustomerObserver::class);
        
     }
 }

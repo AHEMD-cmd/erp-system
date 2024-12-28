@@ -76,7 +76,7 @@ class ItemCard extends Model
      */
     public function parent()
     {
-        return $this->belongsTo(ItemCard::class, 'parent_id');
+        return $this->belongsTo(ItemCard::class, 'parent_id')->withDefault();
     }
 
     /**
@@ -84,7 +84,7 @@ class ItemCard extends Model
      */
     public function retailUnit()
     {
-        return $this->belongsTo(Uom::class, 'retail_uom_id');
+        return $this->belongsTo(Uom::class, 'retail_uom_id')->withDefault();
     }
 
     /**
@@ -92,7 +92,7 @@ class ItemCard extends Model
      */
     public function unit()
     {
-        return $this->belongsTo(Uom::class, 'uom_id');
+        return $this->belongsTo(Uom::class, 'uom_id')->withDefault();
     }
 
     public function setPhotoAttribute($value)

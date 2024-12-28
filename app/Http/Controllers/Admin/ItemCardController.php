@@ -87,7 +87,6 @@ class ItemCardController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(ItemCardStoreRequest $request)
-    // public function store(Request $request) 
     {
         $data = $request->validated();
 

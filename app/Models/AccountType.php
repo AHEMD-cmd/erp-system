@@ -9,4 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 class AccountType extends Model
 {
     use HasFactory, HandlesTimestamps;
+
+    protected $fillable=['name', 'active', 'related_to_internal_accounts'];
 }

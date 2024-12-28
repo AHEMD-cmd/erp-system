@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Admin;
+use App\Models\Account;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -19,8 +20,9 @@ class SettingContoller extends Controller
 
     public function edit()
     {
+        $parentAccounts = Account::select('account_number', 'name')->where(['is_parent' => 1, 'company_code' => auth()->user()->company_code])->get();
         $setting = Setting::where('company_code', auth()->user()->company_code)->first();
-        return view('admin.settings.edit', compact('setting'));
+        return view('admin.settings.edit', compact('setting', 'parentAccounts'));
     }
 
     public function update(SettingUpdateRequest $request, $id)

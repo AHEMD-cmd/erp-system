@@ -5,7 +5,7 @@
 @section('content_header', 'فئات الأصناف')
 
 @section('content_header_link')
-    <a href="{{ route('admin.sales-material-types.index') }}">فئات الأصناف</a>
+    <a href="{{ route('admin.item-card-categories.index') }}">فئات الأصناف</a>
 @endsection
 
 @section('content_header_active', 'عرض')

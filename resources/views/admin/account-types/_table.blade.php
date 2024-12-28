@@ -21,16 +21,8 @@
 
                   
                    
-                    // <td>
-                    //     <a href="{{ route('admin.uoms.edit', $info->id) }}" class="btn btn-sm btn-primary">تعديل</a>
-                    //     <form action="{{ route('admin.uoms.destroy', $info->id) }}" method="POST"
-                    //         style="display: inline-block;"
-                    //         onsubmit="return confirm('هل أنت متأكد أنك تريد حذف هذا المخزن')">
-                    //         @csrf
-                    //         @method('DELETE')
-                    //         <button type="submit" class="btn btn-sm btn-danger">حذف</button>
-                    //     </form>
-                    // </td>
+                    
+                    
                 </tr>
             @endforeach
         </tbody>
