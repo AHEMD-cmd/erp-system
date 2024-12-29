@@ -51,9 +51,9 @@
                 </li>
 
 
-                <li class="nav-item has-treeview {{ request()->is('admin/account-types*') || request()->is('admin/accounts*') || request()->is('admin/customers*') ? 'menu-open' : '' }} ">
+                <li class="nav-item has-treeview {{ request()->is('admin/account-types*') || request()->is('admin/accounts*') || request()->is('admin/customers*') || request()->is('admin/suppliers-category') ? 'menu-open' : '' }} ">
                 <a href="#"
-                    class="nav-link {{ request()->is('admin/account-types*') || request()->is('admin/accounts*') || request()->is('admin/customers*')  ? 'active' : '' }}">
+                    class="nav-link {{ request()->is('admin/account-types*') || request()->is('admin/accounts*') || request()->is('admin/customers*') || request()->is('admin/suppliers-category') ? 'active' : '' }}">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
                         الحسابات
@@ -77,6 +77,12 @@
                         <a href="{{ route('admin.customers.index') }}"
                             class="nav-link {{ request()->is('admin/customers*') ? 'active' : '' }}">
                             <p>   العملاء</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.supplier-categories.index') }}"
+                            class="nav-link {{ request()->is('admin/customers*') ? 'active' : '' }}">
+                            <p>   فئات الموردين</p>
                         </a>
                     </li>
                    

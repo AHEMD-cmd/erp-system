@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\ItemCardController;
 use App\Http\Controllers\Admin\AccountTypeController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\Admin\ItemCardCategoryController;
+use App\Http\Controllers\Admin\SupplierCategoryController;
 use App\Http\Controllers\Admin\SalesMaterialTypeController;
 
 
@@ -58,6 +59,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin', 'as' => 'admin.
         Route::resource('account-types', AccountTypeController::class);
         Route::resource('accounts', AccountController::class);
         Route::resource('customers', CustomerController::class);
+        Route::resource('supplier-categories', SupplierCategoryController::class);
+
 
         
     }
